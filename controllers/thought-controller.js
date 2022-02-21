@@ -37,7 +37,9 @@ const thoughtController = {
                 }
                 res.json(dbUserData);
             })
-            .catch(err => res.json(err));
+            .catch(err => {
+                console.log(err)
+                res.json(err)});
     },
 
     // update a particular thought
@@ -78,7 +80,33 @@ const thoughtController = {
                 res.json(dbUserData);
             })
             .catch(err => res.json(err));
-    }
-}
+    },
+
+    createReaction({ params, body }, res) {
+        Thought.findOneAndUpdate(
+          { _id: params.thoughtId },
+          { $push: { reactions: body } },
+          { new: true, runValidators: true }
+        )
+          .then(dbThoughtData => {
+            if (!dbThoughtData) {
+              res.status(404).json({ message: 'No such thought found!' });
+              return;
+            }
+            res.json(dbThoughtData);
+          })
+          .catch(err => res.json(err));
+      },
+
+      removeReaction({ params }, res) {
+          Thought.findOneAndUpdate(
+              { _id: params.thoughtId },
+              { $pull: {reactions: { reactionId: params.reactionId } } },
+              {new: true }
+          )
+            .then(dbThoughtData => res.json(dbThoughtData))
+            .catch(err => res.json(err));
+      }
+};
 
 module.exports = thoughtController;
