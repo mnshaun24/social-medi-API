@@ -46,7 +46,7 @@ const thoughtController = {
     updateThought({ params, body }, res) {
         Thought.findOneAndUpdate(
             { _id: params.thoughtId },
-            { $push: { thoughts: body } },
+            body,
             { new: true, runValidators: true }
         )
         .then(dbThoughtData => {
