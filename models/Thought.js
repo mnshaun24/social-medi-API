@@ -18,7 +18,7 @@ const ReactionSchema = new Schema(
             required: true
         },
         createdAt: {
-            type: Date,
+            type: String,
             default: moment().format('MMM Do YYYY, h:mm:ss a'),
         }
     }
@@ -32,7 +32,7 @@ const ThoughtSchema = new Schema(
             maxlength: 280
         },
         createdAt: {
-            type: Date, 
+            type: String, 
             default: moment().format('MMM Do YYYY, h:mm:ss a'),
         },
         userName: {
