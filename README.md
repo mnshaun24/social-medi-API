@@ -4,7 +4,7 @@
 This assignment building routes for a social media app fulfills the requirements for the week 18 challenge. The challenge is to build a backend using NoSQL for routes common for a social media app.
 
 ## Purpose
-To practice NoSQL and including Mongoose ODM.
+To practice NoSQL and backend architecture including Mongoose ODM.
 
 ## Built With
 * Node
