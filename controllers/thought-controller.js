@@ -12,7 +12,7 @@ const thoughtController = {
 
     // get a particular thought
     getThoughtById({ params }, res) {
-        Thought.findOne({ _id: params.id })
+        Thought.findOne({ _id: params.thoughtId })
             .then(dbThoughtData => res.json(dbThoughtData))
             .catch(err => {
                 console.log(err);
