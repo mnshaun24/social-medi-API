@@ -1,7 +1,7 @@
 ## Shaun's Social MediApi
 
-## Assignment
-This assignment building routes for a social media app fulfills the requirements for the week 18 challenge. The challenge is to build a backend using NoSQL for routes common for a social media app.
+## About
+To contrast with a relational database, I built the backend of a social media app using a NoSQL database. The routes included are standard for social media sites. Walkthrough videos are included to demonstrate all routes functioning as expected.
 
 ## Purpose
 To practice NoSQL and backend architecture including Mongoose ODM.
@@ -13,10 +13,7 @@ To practice NoSQL and backend architecture including Mongoose ODM.
 * Insomnia
 * JavaScript
 
-## Notes
-I have split my example video into four parts due to the 5-minute length restriction. 
-
-## Live app link
+## App Walkthrough Links
 Part 1: https://drive.google.com/file/d/13txRKQiYsPBcv6L7ZuuoAjcQGkcdPe2T/view
 
 Part 2: https://drive.google.com/file/d/1BQ__FbbPkZgkyFWqHf5TB-P9ajmvSwJ6/view
